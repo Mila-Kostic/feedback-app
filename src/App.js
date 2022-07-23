@@ -1,21 +1,23 @@
-import React from 'react'
+import React from "react";
 
-
-/* first easy way
-function App(){
-    return (
-        <div className='container'>
-        <h1>My App</h1>
-        </div>
-    )
-}
-*/ 
+// first easy way
 function App() {
-return React.createElement(
-'div',
-{ className: 'container' },
-React.createElement('h1', {}, 'My App')
-)
+  const title = "Blog Post";
+  const body = "This is my blog post";
+  return (
+    <div className="container">
+      <h1>{title}</h1>
+      <p>{body}</p>
+      {Math.random() * (5 + 5)}
+    </div>
+  );
 }
-export default App
-
+//II way
+// function App() {
+//   return React.createElement(
+//     "div",
+//     { className: "container" },
+//     React.createElement("h1", {}, "My App")
+//   );
+// }
+export default App;
